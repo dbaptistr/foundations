@@ -1,0 +1,14 @@
+#Sent the file
+scp -i ~/.ssh/foundations_key ~/Downloads/Dark_Sky.py root@204.48.30.186:
+
+#Enter the server
+ssh -i ~/.ssh/foundations_key root@204.48.30.186
+
+#Run the script
+python3 Dark_Sky.py
+
+#Enter cron
+crontab -e
+
+#Run the timeframe
+0 8 * * * python3 Dark_Sky.py 

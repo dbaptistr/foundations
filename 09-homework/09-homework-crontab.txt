@@ -1,0 +1,15 @@
+
+#Sent the file
+scp -i ~/.ssh/foundations_key ~/Downloads/09-homework-wp.py root@204.48.30.186:
+
+#Enter the server
+ssh -i ~/.ssh/foundations_key root@204.48.30.186
+
+#Run the script
+python3 09-homework-wp.py
+
+#Enter cron
+crontab -e
+
+#Run the timeframe
+0 0-23/6 * * * python3 09-homework-wp.py 
